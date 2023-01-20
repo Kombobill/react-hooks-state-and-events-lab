@@ -1,6 +1,12 @@
 import React from "react";
 
 function Item({ name, category }) {
+  const [change , setChange] = useState(false)
+  function handleAddItem(){
+    setChange(!change)
+
+  }
+  const changeLi = change ? "in-cart" : ""
   return (
     <li className="">
       <span>{name}</span>

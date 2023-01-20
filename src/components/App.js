@@ -1,8 +1,14 @@
 import React from "react";
 import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
+import { useState } from "react";
 
 function App() {
+  const [mode , setMode] = useState(false)
+  function handleMode(){
+    setMode(!mode)
+  }
+
 
   // replace 'false' with a state variable that can be toggled between true and false
   // this will be used for the Dark Mode Toggle feature
